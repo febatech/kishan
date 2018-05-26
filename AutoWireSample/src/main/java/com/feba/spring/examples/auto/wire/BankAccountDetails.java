@@ -1,5 +1,7 @@
 package com.feba.spring.examples.auto.wire;
 
+import java.util.Properties;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class BankAccountDetails {
@@ -7,6 +9,16 @@ public class BankAccountDetails {
 	public BankAccountDetails(AccountType accountType, CustomerInfo customer){
 		this.setAccountType(accountType);
 		this.setCustomerInfo(customer);
+	}
+	
+	private Properties props;
+	
+	public void setProps(Properties props){
+		this.props = props;
+	}
+	
+	public Properties getProps(){
+		return this.props;
 	}
 	
 	@Autowired

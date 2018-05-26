@@ -37,10 +37,24 @@
    </bean>
    
    <bean id="accountType" class="com.feba.spring.examples.auto.wire.AccountType" >
-   		<property name="accountType" value="Savings"/>
+   		<!-- <property name="accountType" value="Savings"/> -->
+   		<property name="accountType"><null/></property>
+   		
    </bean>
    
    <bean id="bankAccountDetails" class="com.feba.spring.examples.auto.wire.BankAccountDetails" autowire="constructor">
+  		<property name="props">
+	  		<!-- <value>
+	  			sample.txt.message=Sample Message
+	  			sample.txt.message1=Sample Message 2
+	  		</value> -->
+	  		<props>
+	  			<prop key="sample.txt.message">Sample Text</prop>
+	  			<prop key="sample.txt.message1">Sample Text 1</prop>
+	  		</props>
+	  		
+  		</property>
+   
    </bean>
    
    

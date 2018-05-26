@@ -10,7 +10,7 @@ package com.feba.spring.examples.auto.wire;
  */
 public class AccountType {
 	
-	private String accountType;
+	private String accountType="Default";
 
 	/**
 	 * @return the accountType
